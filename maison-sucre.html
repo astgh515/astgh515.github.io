@@ -1,0 +1,1662 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Maison Sucré — Little Moments, Made Sweeter</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "DM Sans", sans-serif;
+  background: #fbf7f1;
+  color: #392b28;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button,
+input,
+select,
+textarea {
+  font-family: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+/* NAV */
+
+nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  padding: 20px 6%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(251,247,241,.92);
+  backdrop-filter: blur(14px);
+  border-bottom: 1px solid #eadfd5;
+}
+
+.logo {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 32px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.logo span {
+  color: #9d4f55;
+}
+
+.nav-links {
+  display: flex;
+  gap: 28px;
+  align-items: center;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.nav-links a:hover {
+  color: #9d4f55;
+}
+
+.cart-btn {
+  border: none;
+  background: #392b28;
+  color: white;
+  padding: 11px 18px;
+  border-radius: 30px;
+}
+
+.cart-btn:hover {
+  background: #9d4f55;
+}
+
+/* HERO */
+
+.hero {
+  min-height: 100vh;
+  padding: 145px 6% 80px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 70px;
+  align-items: center;
+}
+
+.hero-text {
+  max-width: 600px;
+}
+
+.eyebrow {
+  color: #9d4f55;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-size: 12px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.hero h1 {
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(60px, 7vw, 100px);
+  line-height: .9;
+  color: #392b28;
+  margin-bottom: 28px;
+}
+
+.hero h1 em {
+  color: #9d4f55;
+}
+
+.hero p {
+  color: #766b65;
+  max-width: 500px;
+  font-size: 17px;
+  line-height: 1.8;
+  margin-bottom: 35px;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.btn {
+  display: inline-block;
+  border: none;
+  padding: 15px 25px;
+  border-radius: 30px;
+  font-weight: 700;
+  transition: .3s;
+}
+
+.btn-primary {
+  background: #392b28;
+  color: white;
+}
+
+.btn-primary:hover {
+  background: #9d4f55;
+  transform: translateY(-3px);
+}
+
+.btn-outline {
+  border: 1px solid #cfc1b7;
+}
+
+.btn-outline:hover {
+  background: #f0e4dc;
+}
+
+.hero-image {
+  height: 650px;
+  position: relative;
+}
+
+.hero-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 240px 240px 25px 25px;
+}
+
+.hero-note {
+  position: absolute;
+  bottom: 25px;
+  left: -35px;
+  background: white;
+  padding: 20px 24px;
+  border-radius: 18px;
+  box-shadow: 0 20px 50px rgba(70,40,30,.15);
+}
+
+.hero-note strong {
+  display: block;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 24px;
+}
+
+.hero-note span {
+  color: #877b74;
+  font-size: 12px;
+}
+
+/* INTRO */
+
+.intro {
+  background: #392b28;
+  color: white;
+  padding: 35px 6%;
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+}
+
+.intro-item h3 {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 27px;
+}
+
+.intro-item p {
+  font-size: 12px;
+  color: #c9bbb4;
+}
+
+/* SECTIONS */
+
+section {
+  padding: 110px 6%;
+}
+
+.section-title {
+  text-align: center;
+  max-width: 650px;
+  margin: 0 auto 55px;
+}
+
+.section-title span {
+  color: #9d4f55;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.section-title h2 {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 58px;
+  line-height: 1;
+  margin: 12px 0;
+}
+
+.section-title p {
+  color: #81766f;
+}
+
+/* MENU */
+
+.menu {
+  background: #fffdf9;
+}
+
+.filters {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 35px;
+  flex-wrap: wrap;
+}
+
+.filter {
+  border: 1px solid #ded2c9;
+  background: transparent;
+  padding: 10px 19px;
+  border-radius: 30px;
+  color: #625650;
+}
+
+.filter.active,
+.filter:hover {
+  background: #392b28;
+  color: white;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 22px;
+}
+
+.product {
+  background: #fbf7f1;
+  border-radius: 20px;
+  overflow: hidden;
+  transition: .4s;
+}
+
+.product:hover {
+  transform: translateY(-7px);
+  box-shadow: 0 20px 45px rgba(60,40,30,.12);
+}
+
+.product-image {
+  height: 300px;
+  position: relative;
+}
+
+.product-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.product-tag {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  background: white;
+  color: #9d4f55;
+  padding: 6px 10px;
+  border-radius: 20px;
+  font-size: 10px;
+  font-weight: 700;
+}
+
+.product-info {
+  padding: 20px;
+}
+
+.product-info h3 {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 27px;
+}
+
+.product-info p {
+  color: #81766f;
+  font-size: 13px;
+  margin: 3px 0 12px;
+}
+
+.product-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.price {
+  font-weight: 700;
+  color: #9d4f55;
+}
+
+.add-btn {
+  border: none;
+  background: #392b28;
+  color: white;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  font-size: 20px;
+}
+
+.add-btn:hover {
+  background: #9d4f55;
+}
+
+/* CUSTOM CAKE */
+
+.custom {
+  background: #eee1d9;
+}
+
+.custom-grid {
+  max-width: 1050px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: .9fr 1.1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.custom-image {
+  height: 560px;
+}
+
+.custom-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 25px;
+}
+
+.custom-content h2 {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 60px;
+  line-height: 1;
+  margin-bottom: 18px;
+}
+
+.custom-content > p {
+  color: #766b65;
+  margin-bottom: 28px;
+}
+
+.order-form {
+  background: #fffdf9;
+  padding: 28px;
+  border-radius: 22px;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  font-size: 12px;
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ddd0c7;
+  border-radius: 10px;
+  background: white;
+  outline: none;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  border-color: #9d4f55;
+}
+
+.form-submit {
+  width: 100%;
+  border: none;
+  padding: 14px;
+  background: #392b28;
+  color: white;
+  border-radius: 30px;
+  font-weight: 700;
+}
+
+.form-submit:hover {
+  background: #9d4f55;
+}
+
+/* GALLERY */
+
+.gallery {
+  background: #fffdf9;
+}
+
+.gallery-grid {
+  max-width: 1100px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1.2fr .8fr .8fr;
+  grid-template-rows: 250px 250px;
+  gap: 15px;
+}
+
+.gallery-item {
+  overflow: hidden;
+  border-radius: 18px;
+}
+
+.gallery-item:first-child {
+  grid-row: span 2;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: .5s;
+}
+
+.gallery-item:hover img {
+  transform: scale(1.05);
+}
+
+/* STORY */
+
+.story {
+  background: #392b28;
+  color: white;
+  text-align: center;
+}
+
+.story blockquote {
+  max-width: 800px;
+  margin: auto;
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(35px, 5vw, 58px);
+  line-height: 1.1;
+}
+
+.story cite {
+  display: block;
+  color: #d9aaa0;
+  font-size: 13px;
+  font-style: normal;
+  margin-top: 25px;
+}
+
+/* FOOTER */
+
+footer {
+  background: #281e1b;
+  color: white;
+  padding: 55px 6% 25px;
+}
+
+.footer-main {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+  padding-bottom: 35px;
+  border-bottom: 1px solid rgba(255,255,255,.12);
+}
+
+.footer-brand h3 {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 35px;
+}
+
+.footer-brand p {
+  color: #a99c95;
+  max-width: 330px;
+  margin-top: 8px;
+}
+
+.footer-links {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+  color: #cfc4bd;
+  font-size: 13px;
+}
+
+.footer-links a:hover {
+  color: white;
+}
+
+.copyright {
+  text-align: center;
+  color: #766b65;
+  padding-top: 20px;
+  font-size: 11px;
+}
+
+/* CART */
+
+.cart-panel {
+  position: fixed;
+  top: 0;
+  right: -420px;
+  width: 390px;
+  height: 100vh;
+  background: #fffdf9;
+  z-index: 3000;
+  box-shadow: -15px 0 50px rgba(0,0,0,.15);
+  padding: 30px;
+  transition: .4s;
+}
+
+.cart-panel.open {
+  right: 0;
+}
+
+.cart-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.cart-header h2 {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 34px;
+}
+
+.close-cart {
+  border: none;
+  background: #eee4dc;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  font-size: 20px;
+}
+
+.cart-items {
+  max-height: 55vh;
+  overflow-y: auto;
+}
+
+.cart-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 0;
+  border-bottom: 1px solid #eadfd5;
+}
+
+.cart-item strong {
+  display: block;
+}
+
+.cart-item small {
+  color: #8b8079;
+}
+
+.remove-item {
+  border: none;
+  background: none;
+  color: #9d4f55;
+}
+
+.cart-total {
+  display: flex;
+  justify-content: space-between;
+  margin: 25px 0;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.checkout {
+  width: 100%;
+  border: none;
+  padding: 15px;
+  background: #392b28;
+  color: white;
+  border-radius: 30px;
+  font-weight: 700;
+}
+
+/* SUCCESS */
+
+.success {
+  display: none;
+  text-align: center;
+  padding: 20px;
+}
+
+.success.show {
+  display: block;
+}
+
+.success-icon {
+  font-size: 50px;
+}
+
+/* RESPONSIVE */
+
+@media(max-width: 1000px) {
+
+  .hero {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-image {
+    height: 520px;
+  }
+
+  .product-grid {
+    grid-template-columns: repeat(2,1fr);
+  }
+
+  .custom-grid {
+    grid-template-columns: 1fr;
+  }
+
+}
+
+@media(max-width: 650px) {
+
+  nav {
+    padding: 15px 5%;
+  }
+
+  .nav-links {
+    display: none;
+  }
+
+  .hero {
+    padding: 120px 5% 60px;
+  }
+
+  .hero h1 {
+    font-size: 58px;
+  }
+
+  .hero-image {
+    height: 420px;
+  }
+
+  .hero-note {
+    left: 10px;
+  }
+
+  .intro {
+    flex-direction: column;
+    gap: 22px;
+  }
+
+  section {
+    padding: 75px 5%;
+  }
+
+  .section-title h2,
+  .custom-content h2 {
+    font-size: 45px;
+  }
+
+  .product-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+
+  .gallery-grid {
+    display: block;
+  }
+
+  .gallery-item {
+    height: 260px;
+    margin-bottom: 12px;
+  }
+
+  .footer-main {
+    flex-direction: column;
+  }
+
+  .footer-links {
+    flex-wrap: wrap;
+  }
+
+  .cart-panel {
+    width: 100%;
+    right: -100%;
+  }
+
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- NAVIGATION -->
+
+<nav>
+
+<a href="#" class="logo">
+Maison <span>Sucré</span>
+</a>
+
+<div class="nav-links">
+
+<a href="#menu">Menu</a>
+<a href="#custom">Custom Cakes</a>
+<a href="#gallery">Gallery</a>
+
+<button class="cart-btn" onclick="openCart()">
+🛍 Cart (<span id="cartCount">0</span>)
+</button>
+
+</div>
+
+</nav>
+
+
+<!-- HERO -->
+
+<header class="hero">
+
+<div class="hero-text">
+
+<div class="eyebrow">
+Handcrafted with love
+</div>
+
+<h1>
+Little moments,<br>
+made <em>sweeter.</em>
+</h1>
+
+<p>
+From delicate pastries to celebration cakes,
+Maison Sucré creates beautiful little things
+for life's sweetest moments.
+</p>
+
+<div class="hero-buttons">
+
+<a href="#menu" class="btn btn-primary">
+Explore the Menu →
+</a>
+
+<a href="#custom" class="btn btn-outline">
+Order a Cake
+</a>
+
+</div>
+
+</div>
+
+
+<div class="hero-image">
+
+<img
+src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=1000&q=85"
+alt="Beautiful celebration cake">
+
+<div class="hero-note">
+
+<strong>Baked fresh every morning</strong>
+
+<span>Small batches · Big love</span>
+
+</div>
+
+</div>
+
+</header>
+
+
+<!-- INTRO -->
+
+<div class="intro">
+
+<div class="intro-item">
+<h3>100% Handmade</h3>
+<p>Every creation is made from scratch.</p>
+</div>
+
+<div class="intro-item">
+<h3>Fresh Daily</h3>
+<p>Made fresh in our kitchen every morning.</p>
+</div>
+
+<div class="intro-item">
+<h3>Made With Love</h3>
+<p>Because the little details matter.</p>
+</div>
+
+</div>
+
+
+<!-- MENU -->
+
+<section class="menu" id="menu">
+
+<div class="section-title">
+
+<span>Our menu</span>
+
+<h2>Sweet things worth sharing.</h2>
+
+<p>
+Discover our collection of cakes, pastries,
+cookies and little treats.
+</p>
+
+</div>
+
+
+<div class="filters">
+
+<button class="filter active" onclick="filterProducts('all',this)">
+All
+</button>
+
+<button class="filter" onclick="filterProducts('cake',this)">
+Cakes
+</button>
+
+<button class="filter" onclick="filterProducts('pastry',this)">
+Pastries
+</button>
+
+<button class="filter" onclick="filterProducts('cookie',this)">
+Cookies
+</button>
+
+</div>
+
+
+<div class="product-grid">
+
+
+<!-- PRODUCT 1 -->
+
+<div class="product" data-category="cake">
+
+<div class="product-image">
+
+<img
+src="https://images.unsplash.com/photo-1565958011703-44f9829ba187?auto=format&fit=crop&w=800&q=85"
+alt="Strawberry cake">
+
+<span class="product-tag">
+Bestseller
+</span>
+
+</div>
+
+<div class="product-info">
+
+<h3>Berry Cloud</h3>
+
+<p>Vanilla sponge · Fresh berries · Cream</p>
+
+<div class="product-bottom">
+
+<span class="price">$32</span>
+
+<button class="add-btn"
+onclick="addToCart('Berry Cloud',32)">
++
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+
+<!-- PRODUCT 2 -->
+
+<div class="product" data-category="cake">
+
+<div class="product-image">
+
+<img
+src="https://images.unsplash.com/photo-1602351447937-745cb720612f?auto=format&fit=crop&w=800&q=85"
+alt="Chocolate cake">
+
+</div>
+
+<div class="product-info">
+
+<h3>Dark Velvet</h3>
+
+<p>Chocolate sponge · Ganache · Sea salt</p>
+
+<div class="product-bottom">
+
+<span class="price">$36</span>
+
+<button class="add-btn"
+onclick="addToCart('Dark Velvet',36)">
++
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+
+<!-- PRODUCT 3 -->
+
+<div class="product" data-category="pastry">
+
+<div class="product-image">
+
+<img
+src="https://images.unsplash.com/photo-1623334044303-241021148842?auto=format&fit=crop&w=800&q=85"
+alt="Croissant">
+
+</div>
+
+<div class="product-info">
+
+<h3>Butter Croissant</h3>
+
+<p>French butter · Flaky layers · Golden crust</p>
+
+<div class="product-bottom">
+
+<span class="price">$5</span>
+
+<button class="add-btn"
+onclick="addToCart('Butter Croissant',5)">
++
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+
+<!-- PRODUCT 4 -->
+
+<div class="product" data-category="cookie">
+
+<div class="product-image">
+
+<img
+src="https://images.unsplash.com/photo-1499636136210-6f4ee915583e?auto=format&fit=crop&w=800&q=85"
+alt="Chocolate cookies">
+
+</div>
+
+<div class="product-info">
+
+<h3>Choco Chunk</h3>
+
+<p>Dark chocolate · Brown butter · Sea salt</p>
+
+<div class="product-bottom">
+
+<span class="price">$8</span>
+
+<button class="add-btn"
+onclick="addToCart('Choco Chunk',8)">
++
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+
+<!-- PRODUCT 5 -->
+
+<div class="product" data-category="pastry">
+
+<div class="product-image">
+
+<img
+src="https://images.unsplash.com/photo-1551024506-0bccd828d307?auto=format&fit=crop&w=800&q=85"
+alt="Donuts">
+
+</div>
+
+<div class="product-info">
+
+<h3>Pink Glaze</h3>
+
+<p>Vanilla dough · Strawberry glaze</p>
+
+<div class="product-bottom">
+
+<span class="price">$6</span>
+
+<button class="add-btn"
+onclick="addToCart('Pink Glaze',6)">
++
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+
+<!-- PRODUCT 6 -->
+
+<div class="product" data-category="cake">
+
+<div class="product-image">
+
+<img
+src="https://images.unsplash.com/photo-1586985289688-ca3cf47d3e6e?auto=format&fit=crop&w=800&q=85"
+alt="Pistachio cake">
+
+</div>
+
+<div class="product-info">
+
+<h3>Pistachio Dream</h3>
+
+<p>Pistachio sponge · Rose cream</p>
+
+<div class="product-bottom">
+
+<span class="price">$38</span>
+
+<button class="add-btn"
+onclick="addToCart('Pistachio Dream',38)">
++
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+
+<!-- PRODUCT 7 -->
+
+<div class="product" data-category="cookie">
+
+<div class="product-image">
+
+<img
+src="https://images.unsplash.com/photo-1499636136210-6f4ee915583e?auto=format&fit=crop&w=800&q=85"
+alt="Cookies">
+
+</div>
+
+<div class="product-info">
+
+<h3>Maison Cookies</h3>
+
+<p>Vanilla · Chocolate · Brown sugar</p>
+
+<div class="product-bottom">
+
+<span class="price">$9</span>
+
+<button class="add-btn"
+onclick="addToCart('Maison Cookies',9)">
++
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+
+<!-- PRODUCT 8 -->
+
+<div class="product" data-category="pastry">
+
+<div class="product-image">
+
+<img
+src="https://images.unsplash.com/photo-1555507036-ab1f4038808a?auto=format&fit=crop&w=800&q=85"
+alt="French pastry">
+
+</div>
+
+<div class="product-info">
+
+<h3>Almond Parisien</h3>
+
+<p>Almond cream · Flaky pastry</p>
+
+<div class="product-bottom">
+
+<span class="price">$7</span>
+
+<button class="add-btn"
+onclick="addToCart('Almond Parisien',7)">
++
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- CUSTOM CAKES -->
+
+<section class="custom" id="custom">
+
+<div class="custom-grid">
+
+<div class="custom-image">
+
+<img
+src="https://images.unsplash.com/photo-1535254973040-607b474cb50d?auto=format&fit=crop&w=1000&q=85"
+alt="Custom wedding cake">
+
+</div>
+
+
+<div class="custom-content">
+
+<div class="eyebrow">
+Made just for you
+</div>
+
+<h2>
+Your celebration.<br>
+Your cake.
+</h2>
+
+<p>
+Tell us about your dream cake and our pastry team
+will create something uniquely yours.
+</p>
+
+
+<div class="order-form">
+
+<form onsubmit="submitCake(event)" id="cakeForm">
+
+<div class="form-row">
+
+<div class="form-group">
+
+<label>Your name</label>
+
+<input
+type="text"
+placeholder="Your name"
+required>
+
+</div>
+
+<div class="form-group">
+
+<label>Email</label>
+
+<input
+type="email"
+placeholder="you@email.com"
+required>
+
+</div>
+
+</div>
+
+
+<div class="form-row">
+
+<div class="form-group">
+
+<label>Cake flavor</label>
+
+<select required>
+
+<option value="">Choose a flavor</option>
+<option>Vanilla & Berries</option>
+<option>Chocolate</option>
+<option>Pistachio</option>
+<option>Red Velvet</option>
+<option>Lemon</option>
+
+</select>
+
+</div>
+
+
+<div class="form-group">
+
+<label>Size</label>
+
+<select required>
+
+<option value="">Choose size</option>
+<option>Small · 6 people</option>
+<option>Medium · 10 people</option>
+<option>Large · 16 people</option>
+<option>Extra Large · 25 people</option>
+
+</select>
+
+</div>
+
+</div>
+
+
+<div class="form-group">
+
+<label>Tell us about your cake</label>
+
+<textarea
+rows="3"
+placeholder="Colors, decorations, message..."
+></textarea>
+
+</div>
+
+
+<button class="form-submit">
+Request My Cake ✦
+</button>
+
+</form>
+
+
+<div class="success" id="cakeSuccess">
+
+<div class="success-icon">
+🍰
+</div>
+
+<h3>Sweet! Your request is in.</h3>
+
+<p>
+We'll be in touch soon to discuss your dream cake.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- GALLERY -->
+
+<section class="gallery" id="gallery">
+
+<div class="section-title">
+
+<span>From our kitchen</span>
+
+<h2>A little taste of Maison Sucré.</h2>
+
+</div>
+
+
+<div class="gallery-grid">
+
+<div class="gallery-item">
+
+<img
+src="https://images.unsplash.com/photo-1486427944299-d1955d23e34d?auto=format&fit=crop&w=1000&q=85"
+alt="Bakery">
+
+</div>
+
+<div class="gallery-item">
+
+<img
+src="https://images.unsplash.com/photo-1558961363-fa8fdf82db35?auto=format&fit=crop&w=800&q=85"
+alt="Pastries">
+
+</div>
+
+<div class="gallery-item">
+
+<img
+src="https://images.unsplash.com/photo-1571115177098-24ec42ed204d?auto=format&fit=crop&w=800&q=85"
+alt="Cake">
+
+</div>
+
+<div class="gallery-item">
+
+<img
+src="https://images.unsplash.com/photo-1519869325930-281384150729?auto=format&fit=crop&w=800&q=85"
+alt="Dessert">
+
+</div>
+
+<div class="gallery-item">
+
+<img
+src="https://images.unsplash.com/photo-1551024601-bec78aea704b?auto=format&fit=crop&w=800&q=85"
+alt="Sweet pastry">
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- STORY -->
+
+<section class="story">
+
+<blockquote>
+“Life is short. Eat the beautiful cake.
+Preferably with someone you love.”
+</blockquote>
+
+<cite>
+— The Maison Sucré philosophy
+</cite>
+
+</section>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+<div class="footer-main">
+
+<div class="footer-brand">
+
+<h3>Maison Sucré</h3>
+
+<p>
+Little moments, made sweeter.
+Handcrafted treats for life's beautiful moments.
+</p>
+
+</div>
+
+
+<div class="footer-links">
+
+<a href="#menu">Menu</a>
+<a href="#custom">Custom Cakes</a>
+<a href="#gallery">Gallery</a>
+<a href="#custom">Contact</a>
+
+</div>
+
+</div>
+
+
+<div class="copyright">
+
+© 2026 Maison Sucré · Made with butter & love.
+
+</div>
+
+</footer>
+
+
+<!-- CART PANEL -->
+
+<div class="cart-panel" id="cartPanel">
+
+<div class="cart-header">
+
+<h2>Your Cart</h2>
+
+<button class="close-cart" onclick="closeCart()">
+×
+</button>
+
+</div>
+
+
+<div class="cart-items" id="cartItems">
+
+<p style="color:#81766f;">
+Your cart is waiting for something sweet.
+</p>
+
+</div>
+
+
+<div class="cart-total">
+
+<span>Total</span>
+
+<span id="cartTotal">$0</span>
+
+</div>
+
+
+<button class="checkout" onclick="checkout()">
+Continue to Checkout →
+</button>
+
+</div>
+
+
+<script>
+
+let cart = [];
+
+
+/* FILTER */
+
+function filterProducts(category, button) {
+
+  const products = document.querySelectorAll(".product");
+  const filters = document.querySelectorAll(".filter");
+
+  filters.forEach(function(item) {
+    item.classList.remove("active");
+  });
+
+  button.classList.add("active");
+
+  products.forEach(function(product) {
+
+    if (category === "all" ||
+        product.dataset.category === category) {
+
+      product.style.display = "block";
+
+    } else {
+
+      product.style.display = "none";
+
+    }
+
+  });
+
+}
+
+
+/* CART */
+
+function addToCart(name, price) {
+
+  cart.push({
+    name: name,
+    price: price
+  });
+
+  updateCart();
+
+  openCart();
+
+}
+
+
+function updateCart() {
+
+  const count = document.getElementById("cartCount");
+
+  count.textContent = cart.length;
+
+  const container = document.getElementById("cartItems");
+
+  const totalElement = document.getElementById("cartTotal");
+
+  if (cart.length === 0) {
+
+    container.innerHTML =
+      '<p style="color:#81766f;">Your cart is waiting for something sweet.</p>';
+
+    totalElement.textContent = "$0";
+
+    return;
+
+  }
+
+
+  container.innerHTML = "";
+
+  let total = 0;
+
+
+  cart.forEach(function(item, index) {
+
+    total += item.price;
+
+    const div = document.createElement("div");
+
+    div.className = "cart-item";
+
+    div.innerHTML = `
+
+      <div>
+
+        <strong>${item.name}</strong>
+
+        <small>$${item.price}</small>
+
+      </div>
+
+      <button
+        class="remove-item"
+        onclick="removeItem(${index})">
+        Remove
+      </button>
+
+    `;
+
+    container.appendChild(div);
+
+  });
+
+
+  totalElement.textContent =
+    "$" + total.toFixed(2);
+
+}
+
+
+function removeItem(index) {
+
+  cart.splice(index, 1);
+
+  updateCart();
+
+}
+
+
+function openCart() {
+
+  document
+    .getElementById("cartPanel")
+    .classList.add("open");
+
+}
+
+
+function closeCart() {
+
+  document
+    .getElementById("cartPanel")
+    .classList.remove("open");
+
+}
+
+
+function checkout() {
+
+  if (cart.length === 0) {
+
+    alert("Your cart is empty. Add something sweet first! 🍰");
+
+    return;
+
+  }
+
+  alert(
+    "Thank you for your order! This demo checkout would connect to a real payment system."
+  );
+
+}
+
+
+/* CAKE FORM */
+
+function submitCake(event) {
+
+  event.preventDefault();
+
+  document.getElementById("cakeForm").style.display = "none";
+
+  document.getElementById("cakeSuccess").classList.add("show");
+
+}
+
+</script>
+
+</body>
+</html>
